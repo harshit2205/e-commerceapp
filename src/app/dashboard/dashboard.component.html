@@ -1,0 +1,58 @@
+<div class="row-flex">
+  <div class="scrollable">
+    <div class="background-image">
+      <div class="middle-h2">New Arrivals</div>
+      <div class="section1">
+        <div class="card1" *ngFor="let product of products" >
+          <img src={{product.pro_images}} class="card1-img part-radius" alt="grocery-item">
+          <div class="card1-head">{{product.pro_name}}</div>
+          <div class="card-amount"><span>&#8377;</span> {{product.pro_price}}</div>
+          <div class="card-star-container">
+            <div *ngFor="let item of [].constructor(product.pro_rating)">
+              <img class="card-star" src="./../../assets/image/star.png" alt="*">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="middle-h2">Catagories</div>
+    <div class="section2">
+      <div class="card2">
+        <img src="./../../assets/image/av1.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av2.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av3.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av4.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av5.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av6.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/av7.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      <div class="card2">
+        <img src="./../../assets/image/gd1.jpeg" alt="item" class="card2-img">
+        <div> male</div>
+      </div>
+      
+    </div>
+    <div class="middle-h2">Recently Viewed</div>
+    <div>recently viewed items</div>
+  </div>
+</div>

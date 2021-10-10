@@ -1,0 +1,32 @@
+
+.container{
+  position: absolute;
+  width: 100%; 
+  height: 85%; 
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-head{
+  width: 95%;
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.item-head-image{
+  flex:  0 0 25%;
+  margin: .5%;
+  padding: 2% 0 0 2%;
+  background-color: indigo;
+}
+
+.item-head-info{
+  flex: 0 0 65%;
+  margin: .5%;
+  padding: 2% 2% 0 2%;
+  background-color: hotpink;
+}

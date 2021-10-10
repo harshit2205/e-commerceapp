@@ -1,0 +1,121 @@
+
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-header{
+    background-color: #15223b;
+    position: static;
+    min-height: 85px;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    z-index: 1;
+    color: white;
+    display: flex; /* the flex is enabled.. */
+
+    /* flex-direction: row; specifying the direction of wrap
+    flex-wrap: wrap; this property wraps the elements to next line while resizing */
+    /* instead of using above 2 use shorthand as below */
+    flex-flow: row nowrap;
+    align-items: center;
+
+    /* justify-content: space-between; */
+}
+
+.float-icon{
+    width:4%;
+    min-width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-left{
+    width: 14%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-mid{
+    width: 62%;
+    height:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px 0px 30px 20px;
+}
+
+.float-right{
+    width: 20%;
+    text-align: left;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-scroll{
+    width: 300px;
+    height: 93vh;
+    position: fixed;
+    border: 5px solid black;
+    background-color: rgb(255, 238, 228);
+}
+
+.hor-flex{
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    background-image: linear-gradient(to bottom, #15223b, white);
+}
+
+.menu_img{
+    height: 80%;
+    width: auto;
+}
+
+.search-bar{
+    width: 70%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 20px 10px;
+}
+
+.search-input{
+    width: 85%;
+    height: 100%;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+
+.search-btn{
+    width: 15%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    border-left: 1px solid grey;
+    text-align: center;
+    background-color: #decec7;
+    /* border-left: 2px solid black; */
+    color: rgb(17,24,71);
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover{
+    background-color: rgb(216, 188, 176);
+}
