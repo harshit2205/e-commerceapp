@@ -3,6 +3,7 @@ body{
     margin: 0;
     height: 100%;
     width: 100%;
+    min-width: 1060px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -117,5 +118,6 @@ body{
 }
 
 .search-btn:hover{
+    cursor: pointer;
     background-color: rgb(216, 188, 176);
 }

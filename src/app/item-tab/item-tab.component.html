@@ -1,18 +1,34 @@
 <div class="container">
     <div class="item-head">
-        <img class="item-head-image" src="" alt="item-image">
+        <div class="item-head-image">
+            <img style="width: 100%;" src={{product.pro_images}} alt="item-image">
+            <div class="item-options">
+                    <div class="button margin-6px">Buy Now</div>
+                    <div class="button margin-6px">Add to Cart</div>
+                    <div class="button margin-6px">Wishlist</div>
+            </div>
+        </div>
         <div class="item-head-info">
-            <div>Item Name</div>
-            <div>item price</div>
-            <div>item rating</div>
-            <div>item catagory</div>
+            <div>
+                <div class="pro-name">{{product.pro_name}}</div>
+                <div class="pro-price"><span>&#8377;</span> {{product.pro_price}}</div>
+                <div class="pro-description">{{product.pro_description}}</div>
+            </div>
+            <div class="container-2">
+                <div class="card-star-container">
+                    <div *ngFor="let item of [].constructor(product.pro_rating)">
+                      <img class="card-star" src="./../../assets/image/star.png" alt="*">
+                    </div>
+                </div>
+                <div class="pro-catagory">Catagory : {{product.pro_catagory}}</div>
+            </div>
         </div>
     </div>
-    <div>item-tab works!</div>
-    <div>item name....</div>
-    <div>item description..</div>
-
-    <div>related items</div>
+    <div class="item-options">
+        <div class="item-options-2">
+            <div>Items Left : {{product.pro_quantity}}</div>
+        </div>
+    </div>
     <div></div>
 </div>
 

@@ -3,13 +3,15 @@
     <div class="background-image">
       <div class="middle-h2">New Arrivals</div>
       <div class="section1">
-        <div class="card1" *ngFor="let product of products" >
-          <img src={{product.pro_images}} class="card1-img part-radius" alt="grocery-item">
-          <div class="card1-head">{{product.pro_name}}</div>
-          <div class="card-amount"><span>&#8377;</span> {{product.pro_price}}</div>
-          <div class="card-star-container">
-            <div *ngFor="let item of [].constructor(product.pro_rating)">
-              <img class="card-star" src="./../../assets/image/star.png" alt="*">
+        <div class="card1-wrapper" *ngFor="let product of products" >
+          <div class="card1" (click)="showItemInfo(product)">
+            <img src={{product.pro_images}} class="card1-img part-radius" alt="grocery-item">
+            <div class="card1-head">{{product.pro_name}}</div>
+            <div class="card-amount"><span>&#8377;</span> {{product.pro_price}}</div>
+            <div class="card-star-container">
+              <div *ngFor="let item of [].constructor(product.pro_rating)">
+                <img class="card-star" src="./../../assets/image/star.png" alt="*">
+              </div>
             </div>
           </div>
         </div>

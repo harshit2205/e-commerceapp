@@ -1,0 +1,39 @@
+<div class="main-div">
+    <div class="header-div">
+        <div class="avatar-div">
+            <img class="image" src="https://robohash.org/quisquamsitnemo.png?size=50x50&set=set1" alt="profile pic">
+        </div>
+        <div class="header-div1">
+            <div class="header1">User Name</div>
+            <div class="header-div2">
+                <div class="header3" [routerLink]="['my_acc/cart']">View Cart Items</div>
+                <div class="header3">View Past Orders</div>
+                <div class="header3">View Wish List</div>
+            </div>
+            <div class="header-div2">
+                <div class="options">Change password or Phone Number</div>
+                <div class="options">Update Address list</div>
+                <div class="options">Update Payment Method Information</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="items-div">
+        <div class="header1"> Recently Viewed Items..</div>
+        <div class="items-div-hor">
+            <div class="card1-wrapper" *ngFor="let product of recentProducts" >
+              <div class="card1" (click)="showItemInfo(product)">
+                <img src={{product.pro_images}} class="card1-img part-radius" alt="grocery-item">
+                <div class="card1-head">{{product.pro_name}}</div>
+                <div class="card-amount"><span>&#8377;</span> {{product.pro_price}}</div>
+                <div class="card-star-container">
+                  <div *ngFor="let item of [].constructor(product.pro_rating)">
+                    <img class="card-star" src="./../../assets/image/star.png" alt="*">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+

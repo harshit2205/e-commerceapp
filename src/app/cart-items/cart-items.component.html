@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="header1">
+        Your Cart Items..
+    </div>
+    <div class="cart-items">
+        <div class="item-card" *ngFor="let product of cartItems">
+            <div class="item-card1"> 
+                <div class="item-card1-item">-</div>
+            </div>
+            <div class="item-card2-img"><img src= {{product.pro_images}} alt="product-img"></div>
+            <div class="item-card3">
+                <div class="item-card3-item1"> 
+                    <div class="item-card3-subitem">
+                        <div class="item-name">{{product.pro_name}}</div>
+                        <div class="item-price"><span>&#8377;</span> {{product.pro_price}}</div>
+                    </div>
+                    <div class="card-star-container">
+                        <div *ngFor="let item of [].constructor(product.pro_rating)">
+                            <img class="card-star" src="./../../assets/image/star.png" alt="*">
+                          </div>
+                    </div>
+                </div>
+                <div class="item-description">{{product.pro_description}}</div>
+                <div class="item-quantity"> Products Left : {{product.pro_quantity}}</div>
+            </div>
+        </div>
+    </div>
+</div>

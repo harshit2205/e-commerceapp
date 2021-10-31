@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Product } from '../models/IProduct';
 import { ProductData } from '../dummy-data/product-data';
+import { SharedResourcesService } from '../shared-resources/shared-resources.service';
+import { Router } from '@angular/router';
+import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,15 +13,17 @@ import { ProductData } from '../dummy-data/product-data';
 export class DashboardComponent implements OnInit {
   public products!: Product[];
 
+  constructor(private router : Router,
+    @Inject(LOCAL_STORAGE) private localStorage : StorageService){}
+
   ngOnInit(): void {
     this.products = <Product[]>ProductData.loadProducts();
-    for(let pro of this.products){
-      console.log("Hello" + pro.toString());
-    }
-
-    console.log("on init called");
   }
-  stars : number = 8;
+
+  showItemInfo(product : Product) : void{
+    this.localStorage.set('Product', JSON.stringify(product));
+    this.router.navigate(['/item-info']);
+  }
 }
 
 

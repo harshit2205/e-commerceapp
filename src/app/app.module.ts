@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemTabComponent } from './item-tab/item-tab.component';
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
-const routes : Routes = [
-  {path : 'dashboard', component : DashboardComponent},
-  {path : 'item-info', component: ItemTabComponent},
-  {path : '**', component : PageNotFoundComponent}
-];
+import { UserInfoComponent } from './user-info/user-info.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,16 +17,16 @@ const routes : Routes = [
     AppComponent,
     ItemTabComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RoutingComponents,
+    UserInfoComponent,
+    CartItemsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SidebarModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

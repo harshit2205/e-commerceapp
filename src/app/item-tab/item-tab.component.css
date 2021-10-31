@@ -11,22 +11,130 @@
 
 .item-head{
   width: 95%;
-  height: 320px;
+  height: 390px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
 .item-head-image{
-  flex:  0 0 25%;
+  position: static;
+  flex: 0 0 25%;
   margin: .5%;
-  padding: 2% 0 0 2%;
-  background-color: indigo;
+  padding: 2px;
+  display: flex;
+  box-shadow: 0px 4px 8px 0px rgb(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .item-head-info{
   flex: 0 0 65%;
   margin: .5%;
   padding: 2% 2% 0 2%;
-  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-star-container{
+  width: fit-content;
+  padding: 2px 5px;
+  margin: 10px;
+  height: 30px;
+  margin-right: 20px;
+  background-color: #15223b;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-star{
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+
+.pro-name{
+  color: #15223b;
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.pro-price{
+  width: fit-content;
+  margin: 3px;
+  padding: 3px 6px;
+  background-image: linear-gradient(rgb(228, 187, 98), rgb(182, 150, 9), rgb(182, 150, 9));
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.pro-catagory{
+  padding-right: 10px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+.container-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.pro-description{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+  word-wrap: normal;
+}
+
+.item-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.item-options-1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-options-2{
+  flex: 0 0 65%;
+  margin: .5%;
+  padding: 2% 2% 0 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button{
+  padding: 10px 20px;
+  background-color: #15223b;
+  color: white;
+  border-radius: .25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  box-shadow: 0 1px 1px 0 rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: #344564;
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+  transform: scale(1.1,1.1);
+}
+
+.margin-6px{
+  margin: 6px;
 }
